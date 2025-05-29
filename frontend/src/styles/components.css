@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+
+@layer components {
+
+  /* ------------------------------------------------------------------
+     ticket-card
+     ------------------------------------------------------------------ */
+  .ticket-card {
+    @apply max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl;
+    @apply mx-auto bg-base-100 rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300;
+  }
+  .ticket-frame {
+    @apply bg-base-100 flex flex-col items-center;
+    @apply p-1 sm:p-2 md:p-3 lg:p-4 xl:p-6;
+  }
+  .ticket-image {
+    @apply relative w-full h-full overflow-visible;
+  }
+  .ticket-image-inner {
+    @apply w-full h-full rounded-md overflow-hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .fade-divider {
+    @apply absolute bottom-0 inset-x-0 pointer-events-none;
+    @apply h-2 sm:h-3 md:h-4 lg:h-6 xl:h-8;
+    @apply bg-gradient-to-t from-base-100 to-transparent;
+  }
+  .notch {
+    @apply absolute transform -translate-y-1/2
+      w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-8 xl:h-8
+      bg-base-100 rounded-full
+      border border-base-200;
+  }
+  /* ------------------------------------------------------------------
+     category-icon
+     ------------------------------------------------------------------ */
+  .category-icon {
+    @apply absolute right-4 bottom-0
+      transform translate-y-1/2 bg-base-100 rounded-full
+      p-1 sm:p-2 md:p-3 lg:p-3 xl:p-3
+      shadow border-2 border-base-200;
+  }
+  .category-icon > svg {
+    @apply text-base-content
+      w-5 h-5
+      sm:w-6 sm:h-6
+      md:w-7 md:h-7
+      lg:w-8 lg:h-8
+      xl:w-9 xl:h-9;
+  }
+  /* ------------------------------------------------------------------
+     ticket-details
+     ------------------------------------------------------------------ */
+  .ticket-details {
+    @apply p-2 sm:p-2.5 md:p-3 lg:p-3.5 xl:p-4
+      font-serif italic
+      text-base-content
+      text-sm sm:text-base md:text-lg lg:text-xl
+      leading-relaxed;
+  }
+  .ticket-header {
+    @apply flex flex-wrap justify-between items-baseline mb-2;
+  }
+  .ticket-title {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+  .ticket-date {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  .ticket-meta-grid {
+    @apply grid grid-cols-2 gap-4 text-sm sm:text-base;
+  }
+  .ticket-meta-label {
+    @apply uppercase text-base-content opacity-60;
+  }
+  .ticket-meta-value {
+    @apply font-medium text-base-content;
+  }
+  /* ------------------------------------------------------------------
+     ticket-actions
+     ------------------------------------------------------------------ */
+  .ticket-actions {
+    @apply flex justify-evenly sm:justify-around
+      px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10
+      py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5
+      border-t border-base-content border-opacity-20
+      bg-base-100
+      text-base-content;
+  }
+  .ticket-actions > .action-btn {
+    @apply flex-1 sm:flex-none flex justify-center items-center
+      space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 xl:space-x-5
+      text-sm sm:text-base md:text-lg lg:text-xl
+      hover:text-base-content transition-transform ease-in-out duration-150
+      active:scale-90;
+  }
+  .action-btn > svg {
+    @apply text-base-content
+      w-5 h-5
+      sm:w-6 sm:h-6
+      md:w-7 md:h-7
+      lg:w-8 lg:h-8
+      xl:w-9 xl:h-9;
+  }
+  .action-btn > span {
+    @apply text-base-content;
+  }
+  .action-btn {
+    @apply flex-1 sm:flex-none flex justify-center items-center
+      space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 xl:space-x-5
+      text-sm sm:text-base md:text-lg lg:text-xl
+      hover:text-base-content transition-colors;
+  }
+  /* ------------------------------------------------------------------
+     Icon buttons (new)
+     ------------------------------------------------------------------ */
+  /* Base style shared by all icon buttons */
+  .icon-btn {
+    @apply flex items-center gap-0.5 rounded-full transition duration-200 ease-in-out focus:outline-none focus:ring focus:ring-offset-1;
+  }
+  /* Edit / neutral action */
+  .icon-btn-edit {
+    /* we duplicate utilities instead of @apply .icon-btn to avoid nested @apply limitations */
+    @apply flex items-center gap-0.5 rounded-full transition duration-200 ease-in-out focus:outline-none focus:ring focus:ring-offset-1;
+    @apply px-2 py-2 text-gray-600 hover:bg-gray-200 hover:text-gray-800;
+  }
+  /* Destructive / delete action */
+  .icon-btn-delete {
+    /* duplicated utilities from .icon-btn (see note above) */
+    @apply flex items-center gap-0.5 rounded-full transition duration-200 ease-in-out focus:outline-none focus:ring focus:ring-offset-1;
+    @apply px-2 py-2 text-red-500 hover:bg-red-100;
+  }
+  /* Icon size helper — apply to the SVG icon inside the button */
+  .icon-btn-icon {
+    @apply w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6;
+  }
+
+  .icon-back-icon {
+    @apply w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9;
+  }
+  /* Back / link arrow action */
+  .icon-btn-back {
+    @apply flex items-center justify-center gap-0.5 focus:outline-none;
+    @apply px-2 py-2 sm:px-2.5 sm:py-2.5 md:px-3 md:py-3;
+    @apply text-gray-500  hover:text-gray-800;
+  }
+
+
+  .event-memory-image {
+    @apply w-full h-48 sm:h-64 md:h-72 lg:h-80 xl:h-96 object-cover rounded-xl shadow-md border border-gray-200;
+  }
+
+  .ticket-description-memory {
+    /* Typography */
+    @apply text-sm sm:text-base md:text-lg italic leading-relaxed text-base-content whitespace-pre-line break-words;
+    /* A subtle call‑out look that respects DaisyUI themes */
+    @apply bg-base-100/50 border-l-4 border-primary/60 pl-3 pr-2 rounded-r-md shadow-sm;
+  }
+  .chevron-btn{
+    @apply mt-0 mb-1 ml-auto mr-2 flex items-center gap-0.5 font-medium text-slate-400 hover:text-slate-600 focus:outline-none
+    text-sm sm:text-base md:text-lg lg:text-xl;
+  }
+  /* ------------------------------------------------------------------
+     Modal components
+     ------------------------------------------------------------------ */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 flex justify-center items-center p-8 z-50;
+  }
+
+  .modal-dialog {
+    @apply bg-base-100 rounded-lg shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto relative;
+  }
+
+  .modal-header  { @apply text-lg font-semibold mb-4 p-2; }
+
+  .modal-body    { @apply mb-6 text-base-content p-2; }
+
+  .modal-error   { @apply text-error mb-2 p-2;  }
+
+  .modal-actions { @apply flex justify-end gap-3 p-2; }
+
+  /* Buttons that respect DaisyUI colour tokens */
+  .btn-cancel { @apply px-4 py-2 rounded bg-base-200 hover:bg-base-300 focus:outline-none; }
+  .btn-delete { @apply px-4 py-2 rounded bg-error text-error-content hover:bg-error/90 focus:outline-none; }
+
+  .btn-cropper {
+    @apply px-3 py-2 glass rounded-md hover:bg-white/40 text-sm text-gray-100 font-medium;
+    @apply min-w-[4rem] sm:min-w-[4rem] md:min-w-[5rem];
+    @apply text-sm sm:text-base md:text-lg;
+    @apply min-h-[2.25rem] sm:min-h-[2.5rem] md:min-h-[3rem];
+  }
+
+  /* ------------------------------------------------------------------
+     Ticket edit form
+     ------------------------------------------------------------------ */
+  .ticket-form        { @apply max-w-2xl mx-auto bg-base-100 p-6 rounded-xl shadow-md relative flex flex-col space-y-4; }
+  .ticket-form-input  { @apply w-full p-2 border border-base-300 rounded bg-base-100 text-base-content; }
+  .ticket-form-counter{ @apply text-right text-sm text-base-content/70; }
+  .btn-save           { @apply px-4 py-2 rounded bg-primary text-primary-content hover:bg-primary/90 focus:outline-none; }
+
+  /* Memory call-to-action button */
+.btn-memory      { @apply inline-flex items-center gap-1 px-4 py-2 rounded-full bg-primary text-primary-content hover:bg-primary/90 focus:outline-none focus:ring mt-6; }
+.btn-memory-icon { @apply w-5 h-5; }
+  .memory-heading { @apply flex items-center gap-2 mt-6 mb-2 text-primary font-semibold uppercase tracking-wide leading-none; }
+.memory-icon    { @apply w-5 h-5 text-primary flex-shrink-0; }
+
+  .form-label         { @apply block text-sm sm:text-base md:text-lg lg:text-xl font-semibold  tracking-wide text-base-content/70 ; }
+.form-label-inline  { @apply inline-flex items-center gap-1 text-sm font-medium text-base-content; }
+}
+
+@tailwind utilities;
