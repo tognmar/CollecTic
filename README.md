@@ -21,6 +21,9 @@ CollecTic is a full-stack web application built over a focused 3-week sprint by 
 - **Social Features**  
   Follow other users and browse their collections to connect with the community.
 
+### Demo
+[Watch the demo video](https://github.com/tognmar/PortfolioPage/raw/main/assets/video/DemoCollecTic.mp4)
+  
 ## Tech Stack
 
 | Layer                  | Technology               |
@@ -33,6 +36,3 @@ CollecTic is a full-stack web application built over a focused 3-week sprint by 
 | CI/CD                  | GitLab CI/CD            |
 | AI & APIs              | OpenAI (GPT-4o-mini)    |
 
-
-### Demo
-[Watch the demo video](https://github.com/tognmar/PortfolioPage/raw/main/assets/video/DemoCollecTic.mp4)
