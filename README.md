@@ -35,4 +35,4 @@ CollecTic is a full-stack web application built over a focused 3-week sprint by 
 
 
 ### Demo
-[Watch the demo video](https://github.com/YourUsername/PortfolioPage/raw/main/assets/video/DemoCollecTic.mp4)
+[Watch the demo video](https://github.com/tognmar/PortfolioPage/blob/main/assets/video/DemoCollecTic.mp4)
