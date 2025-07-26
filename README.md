@@ -1,8 +1,11 @@
 # CollecTic
 
-<img src="assets/thumbnail.png" alt="Thumbnail" width="600" />
-
-[Watch the demo video](https://github.com/tognmar/PortfolioPage/raw/main/assets/video/DemoCollecTic.mp4)
+<p align="center">
+  <img src="assets/thumbnail.png" alt="Thumbnail" width="600" />
+</p>
+<p align="center">
+  <a href="https://github.com/tognmar/PortfolioPage/raw/main/assets/video/DemoCollecTic.mp4">Watch the demo video</a>
+</p>
 
 CollecTic is a full-stack web application built over a focused 3-week sprint by a passionate team of three, crafted especially for concertgoers and event lovers to digitally preserve, organize, and share their treasured ticket collections. This project was born from a shared love for live experiences and the desire to keep those memories alive in a unique way. Users can upload or photograph their tickets, while AI seamlessly extracts key event information—artist, venue, date, and location—saving it all to a personal, searchable gallery. An interactive map is highlighting every event attended across diverse locations. More than just an archive, CollecTic makes it easy to revisit, organize, and share your musical and event milestones with others who share your passion.
 
