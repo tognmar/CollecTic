@@ -4,6 +4,9 @@ CollecTic is a full-stack web application built over a focused 3-week sprint by 
 
 > _Note: This project is a work in progress, with ongoing improvements and feature development._
 
+### Demo
+[Watch the demo video](https://github.com/tognmar/PortfolioPage/raw/main/assets/video/DemoCollecTic.mp4)
+
 ## Key Features
 
 - **Upload or Photograph Tickets**  
@@ -21,8 +24,6 @@ CollecTic is a full-stack web application built over a focused 3-week sprint by 
 - **Social Features**  
   Follow other users and browse their collections to connect with the community.
 
-### Demo
-[Watch the demo video](https://github.com/tognmar/PortfolioPage/raw/main/assets/video/DemoCollecTic.mp4)
   
 ## Tech Stack
 
